@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  #host: ec2-184-72-240-189.compute-1.amazonaws.com
+  #database: didmpraqlper3
+  #port: 5432
+  url: postgres://ruflybpuhgnsnf:mV5Bidxk99O6l08c3RNGFgp1gj@ec2-184-72-240-189.compute-1.amazonaws.com:5432/didmpraqlper3
+  username: ruflybpuhgnsnf
+  password: mV5Bidxk99O6l08c3RNGFgp1gj
+
+development:
+  <<: *default
+#  database: didmpraqlper3
+
+test:
+  <<: *default
+  #database: db/test.sqlite3
+
+production:
+  <<: *default
+  #database: db/production.sqlite3
